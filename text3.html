@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <style>
+        @keyframes move{
+          0%{
+            transform: translate3d(150px,60px,0);
+
+          }
+          50%{
+            transform: translate3d(150px,50px,0);
+
+            background-color: #c99b1e8c;
+          }
+          70%{
+            transform: translate3d(170px,30px,0);
+
+          }
+          100%{
+            transform: translate3d(160px,40px,0);
+
+
+          }
+        }
+        @keyframes move-1{
+          0%{
+            transform: translate3d(150px,200px,0);
+
+          }
+          50%{
+            transform: translate3d(160px,250px,0);
+
+            background-color: #c99b1e8c;
+          }
+          70%{
+            transform: translate3d(140px,230px,0);
+
+          }
+          100%{
+            transform: translate3d(170px,240px,0);
+
+
+          }
+        }
+        @keyframes move2{
+          0%{
+            transform: translate3d(180px,60px,0);
+
+
+          }
+          50%{
+            transform: translate3d(120px,40px,0);
+
+          }
+          100%{
+            transform: translate3d(140px,40px,0);
+            background-color: #c99b1e48;
+
+
+          }
+        }
+        @keyframes move3{
+          0%{
+            transform: translate3d(170px,80px,0);
+            background-color: #c99b1eb2;
+
+
+          }
+          50%{
+            transform: translate3d(180px,40px,0);
+
+          }
+          80%{
+            transform: translate3d(200px,50px,0);
+
+          }
+          100%{
+            transform: translate3d(190px,60px,0);
+
+
+          }
+        }
+        @keyframes move4{
+          0%{
+            transform: translate3d(200px,200px,0);
+            background-color: #c99b1eb2;
+
+
+          }
+          50%{
+            transform: translate3d(190px,260px,0);
+
+
+          }
+          100%{
+            transform: translate3d(180px,230px,0);
+
+
+          }
+        }
+
+        @keyframes move5{
+          0%{
+            transform: translate3d(130px,350px,0);
+            background-color: #c99b1eb7;
+
+
+          }
+          50%{
+            transform: translate3d(150px,270px,0);
+            background-color: #c99b1e3f;
+
+
+          }
+          100%{
+            transform: translate3d(140px,200px,0);
+            background-color: #c99b1e80;
+
+
+
+          }
+        }
+        @keyframes move6{
+          0%{
+            transform: translate3d(-330px,350px,0);
+            /* background-color: #c99b1eb7; */
+            border: 1px #c99b1e69 solid;
+
+
+
+          }
+          50%{
+            transform: translate3d(-350px,270px,0);
+            /* background-color: #c99b1e3f; */
+
+
+          }
+          100%{
+            transform: translate3d(-340px,200px,0);
+            /* background-color: #c99b1e80; */
+
+
+
+          }
+        }
+
+          body{
+              background-color: #293438;
+          }
+          .con-g{
+            display: flex;
+          }
+          .circle-g{
+            position: absolute;
+          }
+          .circle{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #C99B1E;
+            animation-name: move;
+            animation-duration: 5s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            /* transform: translate3d(40px,50px,0); */
+          }
+          .circle-1{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #C99B1E;
+            animation-name: move-1;
+            animation-duration: 5s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            /* transform: translate3d(40px,50px,0); */
+          }
+          .circle2{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #C99B1E;
+            animation-name: move2;
+            animation-duration: 8s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+          }
+          .circle3{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #C99B1E;
+            animation-name: move3;
+            animation-duration: 10s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+          }
+          .circle4{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #c99b1e2d;
+            animation-name: move4;
+            animation-duration: 8s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+          }
+          .circle5{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #c99b1e;
+            animation-name: move5;
+            animation-duration: 10s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+          }
+          .circle6{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* background-color: #c99b1e; */
+            animation-name: move6;
+            animation-duration: 10s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            background-color: transparent; /* Can be set to transparent */
+
+            border: 1px #c99b1e solid;
+
+            /* -webkit-border-radius: 100px; */
+          }
+          h1{
+            color: rgb(255, 255, 255);
+            margin: 30px;
+          }
+          button{
+              color: rgb(255, 255, 255);
+              background-color: #3E5C6F;
+              display:flex;
+              margin: 30px;
+              border-radius: 7px;
+              border: 1px solid transparent ;
+              padding: 5px 10px;
+              letter-spacing: 2px;
+          }
+          button:hover{
+            /* background-color:rgb(16, 94, 90) ; */
+            /* background-color: #214C64; */
+            background-color: #C99B1E;
+        /* outline: #6e552f solid 0.5px; */
+        transition: .5s;
+        /* box-shadow:10px 10px 10px rgb(8, 48, 46) ; */
+        box-shadow:10px 10px 10px#102430 ;
+
+        /* transform: translateX(2px),translateY(2px); */
+        transform: scale(1.1, 1.1);
+          }
+          button:active{
+            border: 1px solid transparent ;
+
+          }
+          .container{
+              max-width: 600px;
+          }
+      </style>
+    <div class="con-g">
+
+        <div class="circle-g">
+          <div class="circle"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="space"></div>
+          <div class="circle-1"></div>
+
+          <div class="circle4"></div>
+          <div class="circle5"></div>
+        </div>
+              
+        
+        <div class="container">
+            <h1>展覽名稱</h1>
+        
+        </div>
+        <div class="circle-g2">
+        
+            <div class="circle6"></div>
+            <div class="circle7"></div>
+          
+            <div class="circle8"></div>
+         </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $.get('https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6', function(data) {
+                console.log(data[22].title);
+                for(let i=0;i<=10;i++){
+                var button=document.createElement('button');//建立HTML元素
+                var txt=document.createTextNode(data[i].title)//建立Text節點
+                var text=button.appendChild(txt);//在btn裡面加入i <button>i</button>
+                $(".container").append(button)
+                // document.body.appendChild(button)//在body裡面加入btn
+            }
+                });
+    </script>
+  </body>
+</html>
