@@ -402,10 +402,10 @@
               var price = showInfo.price.length ==0 ? '免費' : showInfo.price;
               var link = data[i].sourceWebPromote;
               var newBtn = `
-                <button class="${title}">${city}-${title}</button>
+                <button class="openBtn" id="${i}">${city}-${title}</button>
               `;
               var info = `
-              <div class="info active">
+              <div class="info active" id="openInfo${i}">
               <ul >
                 <li>
                   <div class="infoTitle">時間 &emsp;&emsp;|</div>
@@ -435,8 +435,16 @@
               $('.container').append(newBtn);
               $('.container').append(info);
             }
+
+         $('.openBtn').click(function(){
+           console.log($(this).attr('id'));
+           var id = $(this).attr('id');
+           $('#openInfo' + id).toggleClass('active');
+         })
+         $('.infoclose').click(function(){
+           $(this).parent().addClass('active');
+         })
         });
-        
     </script>
   </body>
 </html>
