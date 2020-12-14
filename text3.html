@@ -152,6 +152,27 @@
 
           }
         }
+        @keyframes move7{
+          0%{
+            transform: translate3d(-230px,350px,0);
+            background-color: #c99b1eb7;
+
+
+          }
+          50%{
+            transform: translate3d(-150px,270px,0);
+            background-color: #c99b1e3f;
+
+
+          }
+          100%{
+            transform: translate3d(-240px,300px,0);
+            background-color: #c99b1e80;
+
+
+
+          }
+        }
 
           body{
               background-color: #293438;
@@ -246,9 +267,39 @@
 
             /* -webkit-border-radius: 100px; */
           }
+          .circle7{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #C99B1E;
+            animation-name: move7;
+            animation-duration: 8s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+          }
           h1{
             color: rgb(255, 255, 255);
             margin: 30px;
+            letter-spacing: 5px;
+          }
+          /* .btn-secondary.focus, .btn-secondary:focus{
+            box-shadow: 0 !important;
+          } */
+          /* .dropdown:focus{
+            border: 0;
+          } */
+          .dropdown-item{
+            background-color: #3E5C6F;
+            color: #ffffff;
+          }
+          .dropdown-menu.show{
+            transform:translate3d(26px, 67px, 0px) !important;
+            padding: 0;
+          }
+          .dropdown-item:hover{
+            background-color: #C99B1E;
+            color: #ffffff;
           }
           button{
               color: rgb(255, 255, 255);
@@ -273,8 +324,13 @@
         transform: scale(1.1, 1.1);
           }
           button:active{
-            border: 1px solid transparent ;
-
+            /* border: 1px solid transparent ; */
+            /* outline: none !important; */
+            
+          }
+          button:focus{
+            outline: none;
+            background-color: #c99b1e;
           }
           .container{
               max-width: 650px;              
@@ -282,18 +338,35 @@
           .info{
             background-color: #ffffff;
             max-width: 650px;
-            border-radius: 7px;
-            border: 1px solid transparent ;
+            /* height: 368px; */
+            /* border-radius: 7px; */
+            border-radius: 15px 50px;
+            border: 8px solid #3E5C6F ;
             letter-spacing: 2px;
             padding: 5px 10px;
             margin: 30px;
             display: flex;
             position: relative;
+            z-index: 1;
+            transition: 1s;
+          }
+
+          .info.active{
+            display: none;
+            /* height: 0;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff00;
+            transition: 1s;
+            color:#3e5c6f00 !important;
+            border: 0 ; */
+            /* transform: translateY(-405px); */
           }
           .info ul{
             /* padding: 0; */
             margin: 0;
           }
+          
           .info li{
             list-style: none;
             display: flex;
@@ -303,6 +376,13 @@
             color: #293438;
 
           }
+          /* .info li .infoTitle,.infoCon{
+            color: transparent;
+          } */
+          /* .info ul li .infoTitle.active{
+            padding: 20px;
+            color: #293438;
+          } */
           .info li .infoCon{
             padding: 20px 0;
             color: #3E5C6F;
@@ -318,9 +398,6 @@
             position: absolute;
             right: 0px;
             top: 0;
-          }
-          .info.active{
-            display: none;
           }
       </style>
     <div class="con-g">
@@ -338,33 +415,35 @@
               
         
         <div class="container">
-            <h1>展覽名稱</h1>
-            <!-- <div class="info">
-              <ul>
-                <li>
-                  <div class="infoTitle">時間 &emsp;&emsp;|</div>
-                  <div class="infoCon">2020/1/1~2020/12/21</div>
-                </li>
-
-                <li>
-                  <div class="infoTitle">地點 &emsp;&emsp;|</div>
-                  <div class="infoCon">宜蘭縣立蘭陽博物</div>
-                </li>
-                <li>
-                  <div class="infoTitle">地址 &emsp;&emsp;|</div>
-                  <div class="infoCon">宜蘭縣頭城鎮青雲路三段750號</div>
-                </li>
-                <li>
-                  <div class="infoTitle">票價 &emsp;&emsp;|</div>
-                  <div class="infoCon">免費</div>
-                </li>
-                <li>
-                  <div class="infoTitle">活動連結 |</div>
-                  <div class="infoCon"><a href="http://www.lym.gov.tw/ch/exhibition/list_permanent.asp">前往活動頁面</a></div>
-                </li>
-              </ul>
-              <button class="infoclose">X</button>
-            </div> -->
+            <h1>一起看展覽</h1>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                請選擇地點
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">基隆市</a>
+                <a class="dropdown-item" href="#">台北市</a>
+                <a class="dropdown-item" href="#">新北市</a>
+                <a class="dropdown-item" href="#">桃園縣</a>
+                <a class="dropdown-item" href="#">新竹市</a>
+                <a class="dropdown-item" href="#">新竹縣</a>
+                <a class="dropdown-item" href="#">苗栗縣</a>
+                <a class="dropdown-item" href="#">台中市</a>
+                <a class="dropdown-item" href="#">彰化縣</a>
+                <a class="dropdown-item" href="#">南投縣</a>
+                <a class="dropdown-item" href="#">雲林縣</a>
+                <a class="dropdown-item" href="#">嘉義市</a>
+                <a class="dropdown-item" href="#">嘉義縣</a>
+                <a class="dropdown-item" href="#">台南市</a>
+                <a class="dropdown-item" href="#">高雄市</a>
+                <a class="dropdown-item" href="#">屏東縣</a>
+                <a class="dropdown-item" href="#">台東縣</a>
+                <a class="dropdown-item" href="#">花蓮縣</a>
+                <a class="dropdown-item" href="#">宜蘭線</a>
+                
+              </div>
+            </div>
+            
         
         </div>
         <div class="circle-g2">
@@ -406,7 +485,7 @@
               `;
               var info = `
               <div class="info active" id="openInfo${i}">
-              <ul >
+              <ul>
                 <li>
                   <div class="infoTitle">時間 &emsp;&emsp;|</div>
                   <div class="infoCon">${time}~${endTime}</div>
@@ -440,6 +519,7 @@
            console.log($(this).attr('id'));
            var id = $(this).attr('id');
            $('#openInfo' + id).toggleClass('active');
+          //  $('.infoTitle'+id).toggleClass('active')
          })
          $('.infoclose').click(function(){
            $(this).parent().addClass('active');
