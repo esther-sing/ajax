@@ -469,7 +469,7 @@
             $('.dropdown-item').click(function(){
                 var citySlect = $(this).text();
                 console.log(citySlect);
-                
+                $('.openBtn').remove()
             for(let i=0;i<=10;i++){
               // var button=document.createElement('button');//建立HTML元素
               // var txt=document.createTextNode(data[i].title)//建立Text節點
@@ -540,24 +540,36 @@
               $('.container').append(newBtn);
               $('.container').append(info);
 
-            }
+           }
                 var text1 = $("[city="+citySlect+"]").length;
-                $('.openBtn').css('display','none')
-                $("[city="+citySlect+"]").css('display','block');
+                // $('.openBtn').css('display','none')
+                // $("[city="+citySlect+"]").css('display','block');
+                $('.openBtn').hide();
+                $("[city="+citySlect+"]").show();
                 console.log(text1)
+
+                $('.openBtn').click(function(){
+                  console.log($(this).attr('id'));
+                  var id = $(this).attr('id');
+                  $('#openInfo' + id).toggleClass('active');
+                  //  $('.infoTitle'+id).toggleClass('active')
+                })
+                $('.infoclose').click(function(){
+                  $(this).parent().addClass('active');
+                })
 
           })
      
 
-         $('.openBtn').click(function(){
-           console.log($(this).attr('id'));
-           var id = $(this).attr('id');
-           $('#openInfo' + id).toggleClass('active');
-          //  $('.infoTitle'+id).toggleClass('active')
-         })
-         $('.infoclose').click(function(){
-           $(this).parent().addClass('active');
-         })
+        //  $('.openBtn').click(function(){
+        //    console.log($(this).attr('id'));
+        //    var id = $(this).attr('id');
+        //    $('#openInfo' + id).toggleClass('active');
+        //   //  $('.infoTitle'+id).toggleClass('active')
+        //  })
+        //  $('.infoclose').click(function(){
+        //    $(this).parent().addClass('active');
+        //  })
         });
     </script>
   </body>
