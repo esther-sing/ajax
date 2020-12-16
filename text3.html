@@ -173,15 +173,37 @@
 
           }
         }
+        @keyframes move8{
+          0%{
+            transform: translate3d(-30px,50px,0);
+            background-color: #c99b1e63;
+
+
+          }
+          50%{
+            transform: translate3d(-50px,70px,0);
+            background-color: #c99b1ec7;
+
+
+          }
+          100%{
+            transform: translate3d(-40px,100px,0);
+            background-color: #c99b1e80;
+
+
+
+          }
+        }
 
           body{
-              background-color: #293438;
+              /* background-color: #293438; */
+              background: linear-gradient(#132d38,#032331,#132d38);
           }
           .con-g{
             display: flex;
           }
           .circle-g{
-            position: absolute;
+            position: fixed;
           }
           .circle{
             width: 30px;
@@ -251,6 +273,10 @@
             animation-fill-mode: both;
             animation-iteration-count: infinite;
           }
+          .circle-g2{
+            position: fixed;
+            right: 0;
+          }
           .circle6{
             width: 100px;
             height: 100px;
@@ -274,6 +300,17 @@
             background-color: #C99B1E;
             animation-name: move7;
             animation-duration: 8s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+          }
+          .circle8{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #C99B1E;
+            animation-name: move8;
+            animation-duration: 5s;
             animation-direction:alternate;
             animation-fill-mode: both;
             animation-iteration-count: infinite;
@@ -448,10 +485,9 @@
         
         </div>
         <div class="circle-g2">
-        <!-- 展覽標題 -->
+        
             <div class="circle6"></div>
             <div class="circle7"></div>
-          
             <div class="circle8"></div>
          </div>
     </div>
