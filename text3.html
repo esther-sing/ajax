@@ -11,6 +11,17 @@
   </head>
   <body>
       <style>
+        @keyframes bgColor {
+          0%{
+            background-color: #132d38;
+          }
+          50%{
+            background-color:#032331;
+          }
+          100%{
+            background-color: #102430;
+          }
+        }
         @keyframes move{
           0%{
             transform: translate3d(150px,60px,0);
@@ -197,7 +208,12 @@
 
           body{
               /* background-color: #293438; */
-              background: linear-gradient(#132d38,#032331,#132d38);
+              /* background: linear-gradient(#132d38,#032331,#132d38); */
+            animation-name: bgColor;
+            animation-duration: 5s;
+            animation-direction:alternate;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
           }
           .con-g{
             display: flex;
