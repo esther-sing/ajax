@@ -421,7 +421,7 @@
                 請選擇地點
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <!-- <a class="dropdown-item" href="#">所有縣市</a> -->
+                <a class="dropdown-item" href="#">所有縣市</a>
                 <a class="dropdown-item" href="#">基隆市</a>
                 <a class="dropdown-item" href="#">臺北市</a>
                 <a class="dropdown-item" href="#">新北市</a>
@@ -549,8 +549,11 @@
                   $('.openBtn').hide();
                   $("[city="+citySlect+"]").show();
                   // console.log(text1)
-
-                
+                  $('#dropdownMenuButton').text(citySlect);
+                  if(citySlect=="所有縣市"){
+                  $('.openBtn').show();
+                    
+                  }
 
             })
             $('.openBtn').click(function(){
