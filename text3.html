@@ -466,11 +466,8 @@
         $.get('https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6', function(data) {
             console.log(data[22].title);
             console.log(data.length);
-            $('.dropdown-item').click(function(){
-                var citySlect = $(this).text();
-                console.log(citySlect);
-                $('.openBtn').remove()
-            for(let i=0;i<=10;i++){
+            // var dataLength = data.length;
+            for(let i=0;i<=100;i++){
               // var button=document.createElement('button');//建立HTML元素
               // var txt=document.createTextNode(data[i].title)//建立Text節點
               // var text=button.appendChild(txt);//在btn裡面加入i <button>i</button>
@@ -506,33 +503,33 @@
                 <button class="openBtn" id="${i}" city="${city}">${city}-${title}</button>
               `;
               var info = `
-              <div class="info active" id="openInfo${i}">
-              <ul>
-                <li>
-                  <div class="infoTitle">時間 &emsp;&emsp;|</div>
-                  <div class="infoCon">${time}~${endTime}</div>
-                </li>
+                <div class="info active" id="openInfo${i}">
+                  <ul>
+                    <li>
+                      <div class="infoTitle">時間 &emsp;&emsp;|</div>
+                      <div class="infoCon">${time}~${endTime}</div>
+                    </li>
 
-                <li>
-                  <div class="infoTitle">地點 &emsp;&emsp;|</div>
-                  <div class="infoCon">${place}</div>
-                </li>
-                <li>
-                  <div class="infoTitle">地址 &emsp;&emsp;|</div>
-                  <div class="infoCon">${location}</div>
-                </li>
-                <li>
-                  <div class="infoTitle">票價 &emsp;&emsp;|</div>
-                  <div class="infoCon">${price}</div>
-                </li>
-                <li>
-                  <div class="infoTitle">活動連結 |</div>
-                  <div class="infoCon"><a href="${link}">前往活動頁面</a></div>
-                </li>
-              </ul>
-              <button class="infoclose">X</button>
-            </div>
-              ` 
+                    <li>
+                      <div class="infoTitle">地點 &emsp;&emsp;|</div>
+                      <div class="infoCon">${place}</div>
+                    </li>
+                    <li>
+                      <div class="infoTitle">地址 &emsp;&emsp;|</div>
+                      <div class="infoCon">${location}</div>
+                    </li>
+                    <li>
+                      <div class="infoTitle">票價 &emsp;&emsp;|</div>
+                      <div class="infoCon">${price}</div>
+                    </li>
+                    <li>
+                      <div class="infoTitle">活動連結 |</div>
+                      <div class="infoCon"><a href="${link}">前往活動頁面</a></div>
+                    </li>
+                  </ul>
+                  <button class="infoclose">X</button>
+                </div>
+                  ` 
               
                
               
@@ -540,36 +537,32 @@
               $('.container').append(newBtn);
               $('.container').append(info);
 
-           }
-                var text1 = $("[city="+citySlect+"]").length;
-                // $('.openBtn').css('display','none')
-                // $("[city="+citySlect+"]").css('display','block');
-                $('.openBtn').hide();
-                $("[city="+citySlect+"]").show();
-                console.log(text1)
+            }
+            $('.dropdown-item').click(function(){
+                  var citySlect = $(this).text();
+                  console.log(citySlect);
+                  // $('.openBtn').remove()
+              
+                  // var text1 = $("[city="+citySlect+"]").length;
+                  // $('.openBtn').css('display','none')
+                  // $("[city="+citySlect+"]").css('display','block');
+                  $('.openBtn').hide();
+                  $("[city="+citySlect+"]").show();
+                  // console.log(text1)
 
-                $('.openBtn').click(function(){
-                  console.log($(this).attr('id'));
-                  var id = $(this).attr('id');
-                  $('#openInfo' + id).toggleClass('active');
-                  //  $('.infoTitle'+id).toggleClass('active')
-                })
-                $('.infoclose').click(function(){
-                  $(this).parent().addClass('active');
-                })
+                
 
-          })
+            })
+            $('.openBtn').click(function(){
+                    console.log($(this).attr('id'));
+                    var id = $(this).attr('id');
+                    $('#openInfo' + id).toggleClass('active');
+                    //  $('.infoTitle'+id).toggleClass('active')
+                  })
+                  $('.infoclose').click(function(){
+                    $(this).parent().addClass('active');
+                  })
      
-
-        //  $('.openBtn').click(function(){
-        //    console.log($(this).attr('id'));
-        //    var id = $(this).attr('id');
-        //    $('#openInfo' + id).toggleClass('active');
-        //   //  $('.infoTitle'+id).toggleClass('active')
-        //  })
-        //  $('.infoclose').click(function(){
-        //    $(this).parent().addClass('active');
-        //  })
         });
     </script>
   </body>
