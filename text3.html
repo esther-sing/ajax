@@ -22,7 +22,7 @@
             background-color: #102430;
           }
         }
-        @keyframes move{
+        @keyframes move1{
           0%{
             transform: translate3d(150px,60px,0);
 
@@ -205,7 +205,182 @@
 
           }
         }
+        /* loading---------------------- */
+        #load {
+            position:absolute;
+            width:600px;
+            height:36px;
+            left:50%;
+            top:40%;
+            margin-left:-300px;
+            overflow:visible;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            cursor:default;
+          }
 
+          #load div {
+            position:absolute;
+            width:20px;
+            height:36px;
+            opacity:0;
+            font-family:Helvetica, Arial, sans-serif;
+            animation:move 2s linear infinite;
+            -o-animation:move 2s linear infinite;
+            -moz-animation:move 2s linear infinite;
+            -webkit-animation:move 2s linear infinite;
+            transform:rotate(180deg);
+            -o-transform:rotate(180deg);
+            -moz-transform:rotate(180deg);
+            -webkit-transform:rotate(180deg);
+            color:#ffffff;
+          }
+
+          #load div:nth-child(2) {
+            animation-delay:0.2s;
+            -o-animation-delay:0.2s;
+            -moz-animation-delay:0.2s;
+            -webkit-animation-delay:0.2s;
+          }
+          #load div:nth-child(3) {
+            animation-delay:0.4s;
+            -o-animation-delay:0.4s;
+            -webkit-animation-delay:0.4s;
+            -webkit-animation-delay:0.4s;
+          }
+          #load div:nth-child(4) {
+            animation-delay:0.6s;
+            -o-animation-delay:0.6s;
+            -moz-animation-delay:0.6s;
+            -webkit-animation-delay:0.6s;
+          }
+          #load div:nth-child(5) {
+            animation-delay:0.8s;
+            -o-animation-delay:0.8s;
+            -moz-animation-delay:0.8s;
+            -webkit-animation-delay:0.8s;
+          }
+          #load div:nth-child(6) {
+            animation-delay:1s;
+            -o-animation-delay:1s;
+            -moz-animation-delay:1s;
+            -webkit-animation-delay:1s;
+          }
+          #load div:nth-child(7) {
+            animation-delay:1.2s;
+            -o-animation-delay:1.2s;
+            -moz-animation-delay:1.2s;
+            -webkit-animation-delay:1.2s;
+          }
+
+          @keyframes move {
+            0% {
+              left:0;
+              opacity:0;
+            }
+            35% {
+              left: 41%; 
+              -moz-transform:rotate(0deg);
+              -webkit-transform:rotate(0deg);
+              -o-transform:rotate(0deg);
+              transform:rotate(0deg);
+              opacity:1;
+            }
+            65% {
+              left:59%; 
+              -moz-transform:rotate(0deg); 
+              -webkit-transform:rotate(0deg); 
+              -o-transform:rotate(0deg);
+              transform:rotate(0deg); 
+              opacity:1;
+            }
+            100% {
+              left:100%; 
+              -moz-transform:rotate(-180deg); 
+              -webkit-transform:rotate(-180deg); 
+              -o-transform:rotate(-180deg); 
+              transform:rotate(-180deg);
+              opacity:0;
+            }
+          }
+
+          @-moz-keyframes move {
+            0% {
+              left:0; 
+              opacity:0;
+            }
+            35% {
+              left:41%; 
+              -moz-transform:rotate(0deg); 
+              transform:rotate(0deg);
+              opacity:1;
+            }
+            65% {
+              left:59%; 
+              -moz-transform:rotate(0deg); 
+              transform:rotate(0deg);
+              opacity:1;
+            }
+            100% {
+              left:100%; 
+              -moz-transform:rotate(-180deg); 
+              transform:rotate(-180deg);
+              opacity:0;
+            }
+          }
+
+          @-webkit-keyframes move {
+            0% {
+              left:0; 
+              opacity:0;
+            }
+            35% {
+              left:41%; 
+              -webkit-transform:rotate(0deg); 
+              transform:rotate(0deg); 
+              opacity:1;
+            }
+            65% {
+              left:59%; 
+              -webkit-transform:rotate(0deg); 
+              transform:rotate(0deg); 
+              opacity:1;
+            }
+            100% {
+              left:100%;
+              -webkit-transform:rotate(-180deg); 
+              transform:rotate(-180deg); 
+              opacity:0;
+            }
+          }
+
+          @-o-keyframes move {
+            0% {
+              left:0; 
+              opacity:0;
+            }
+            35% {
+              left:41%; 
+              -o-transform:rotate(0deg); 
+              transform:rotate(0deg); 
+              opacity:1;
+            }
+            65% {
+              left:59%; 
+              -o-transform:rotate(0deg); 
+              transform:rotate(0deg); 
+              opacity:1;
+            }
+            100% {
+              left:100%; 
+              -o-transform:rotate(-180deg); 
+              transform:rotate(-180deg); 
+              opacity:0;
+            }
+          }
+/* ----------------------------------- */
           body{
               /* background-color: #293438; */
               /* background: linear-gradient(#132d38,#032331,#132d38); */
@@ -226,7 +401,7 @@
             height: 30px;
             border-radius: 50%;
             background-color: #C99B1E;
-            animation-name: move;
+            animation-name: move1;
             animation-duration: 5s;
             animation-direction:alternate;
             animation-fill-mode: both;
@@ -387,6 +562,7 @@
           }
           .container{
               max-width: 650px;     
+              z-index: 1;
           }
           .info{
             background-color: #ffffff;
@@ -500,6 +676,15 @@
             
         
         </div>
+        <div id="load">
+          <div>G</div>
+          <div>N</div>
+          <div>I</div>
+          <div>D</div>
+          <div>A</div>
+          <div>O</div>
+          <div>L</div>
+        </div>
         <div class="circle-g2">
         
             <div class="circle6"></div>
@@ -515,9 +700,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
+      $(document).ready(function(){
+        console.log('loading');
+        $('.dropdown').hide();
+      })
         $.get('https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6', function(data) {
             console.log(data[22].title);
             console.log(data.length);
+            // data.onload = function(){
+            //   console.log('load')
+
+            // }
             // var dataLength = data.length;
             for(let i=0;i<=100;i++){
               // var button=document.createElement('button');//建立HTML元素
@@ -535,21 +728,6 @@
               var location = showInfo.location;
               var price = showInfo.price.length ==0 ? '免費' : showInfo.price;
               var link = data[i].sourceWebPromote;
-              // var city_arr ={
-              //   '基隆市':[],
-              //   '台北市':[],
-              //   '新北市':[],
-              //   '桃園縣':[],
-              //   '新竹市':[],
-              //   '新竹縣':[],
-              //   '苗栗縣':[],
-              //   '台中市':[],
-              //   '彰化縣':[],
-              //   '南投縣':[],
-              //   '雲林縣':[],
-              //   '嘉義市':[],
-              //   '嘉義縣':[],
-              //   '台南市','高雄市','屏東縣','台東縣','花蓮縣','宜蘭縣':[]} ;
                 
               var newBtn = `
                 <button class="openBtn" id="${i}" city="${city}">${city}-${title}</button>
@@ -590,6 +768,10 @@
               $('.container').append(info);
 
             }
+        console.log("onload");
+        $('.dropdown').show();
+        $('#load').hide()
+
             $('.dropdown-item').click(function(){
                   var citySlect = $(this).text();
                   console.log(citySlect);
